@@ -26,7 +26,7 @@ export class StirlingPdfModule {
     const providers: Provider[] = [
       {
         provide: STIRLING_PDF_MODULE_OPTIONS,
-        useFactory: options.useFactory,
+        useFactory: options.useFactory!,
         inject: options.inject || [],
       },
       StirlingPdfService,

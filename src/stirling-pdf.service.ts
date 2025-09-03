@@ -11,7 +11,7 @@ import {
   SecurityApi, 
   Configuration 
 } from './generated';
-import { StirlingPdfModuleOptions } from './interfaces/stirling-pdf-config.interface';
+import type { StirlingPdfModuleOptions } from './interfaces/stirling-pdf-config.interface';
 import { STIRLING_PDF_MODULE_OPTIONS } from './constants';
 
 @Injectable()
@@ -28,7 +28,7 @@ export class StirlingPdfService {
 
   constructor(
     @Inject(STIRLING_PDF_MODULE_OPTIONS)
-    private readonly options: StirlingPdfModuleOptions
+    options: StirlingPdfModuleOptions
   ) {
     const configuration = new Configuration({
       basePath: options.baseURL,
