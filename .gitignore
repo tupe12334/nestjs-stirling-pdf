@@ -99,3 +99,6 @@ src/generated/
 # OpenAPI Generator CLI cache
 .openapi-generator/
 .openapi-generator-ignore
+
+# NPM authentication (generated during release)
+.npmrc

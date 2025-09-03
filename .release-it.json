@@ -18,11 +18,15 @@
   "hooks": {
     "before:init": [
       "if [ -f .env ]; then set -a && source .env && set +a; fi",
+      "if [ -n \"$NPM_TOKEN\" ]; then echo \"//registry.npmjs.org/:_authToken=${NPM_TOKEN}\" > .npmrc; fi",
       "pnpm run test", 
       "pnpm run lint"
     ],
     "after:bump": "pnpm run build",
-    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+    "after:release": [
+      "echo Successfully released ${name} v${version} to ${repo.repository}.",
+      "rm -f .npmrc"
+    ]
   },
   "plugins": {
     "@release-it/conventional-changelog": {

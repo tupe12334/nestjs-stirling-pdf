@@ -116,8 +116,15 @@ cp .env.example .env
 ```
 
 Edit `.env` and add your tokens:
-- `NPM_TOKEN`: Required for publishing to NPM
+- `NPM_TOKEN`: Required for publishing to NPM (create "Automation" type token to bypass OTP)
 - `GITHUB_TOKEN`: Required for creating GitHub releases
+
+#### Creating an NPM Automation Token (No OTP Required)
+
+1. Go to [NPM Access Tokens](https://www.npmjs.com/settings/tokens)
+2. Click "Generate New Token"
+3. Select **"Automation"** type (this bypasses OTP requirements)
+4. Copy the token and add it to your `.env` file
 
 ### Release Process
 
