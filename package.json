@@ -1,6 +1,6 @@
 {
   "name": "nestjs-stirling-pdf",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "A NestJS module for seamless integration with Stirling PDF instances",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
