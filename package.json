@@ -1,6 +1,6 @@
 {
   "name": "nestjs-stirling-pdf",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A NestJS module for seamless integration with Stirling PDF instances",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,9 +8,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "prepare": "npm run build",
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "prepare": "pnpm run build",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -64,7 +64,9 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
     "ts-jest": "^29.1.0",
-    "typescript": "^5.2.0"
+    "typescript": "^5.2.0",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.6.0"
   },
   "jest": {
     "preset": "ts-jest",
