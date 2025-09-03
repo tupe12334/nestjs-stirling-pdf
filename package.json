@@ -18,7 +18,10 @@
     "lint:fix": "eslint src/**/*.ts --fix",
     "format": "prettier --write src/**/*.ts",
     "generate:sdk": "pnpm dlx @openapitools/openapi-generator-cli generate -i https://api.swaggerhub.com/apis/Frooodle/Stirling-PDF/0.45.0 -g typescript-axios -o ./src/generated",
-    "release": "release-it"
+    "release": "release-it",
+    "release:patch": "release-it patch --ci",
+    "release:minor": "release-it minor --ci",
+    "release:major": "release-it major --ci"
   },
   "keywords": [
     "nestjs",

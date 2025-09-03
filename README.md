@@ -124,7 +124,13 @@ Edit `.env` and add your tokens:
 The project uses `release-it` for automated releases:
 
 ```bash
+# Interactive release (prompts for version type)
 pnpm run release
+
+# CI releases (non-interactive)
+pnpm run release:patch  # 1.0.0 -> 1.0.1
+pnpm run release:minor  # 1.0.0 -> 1.1.0  
+pnpm run release:major  # 1.0.0 -> 2.0.0
 ```
 
 This will:
