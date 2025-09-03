@@ -4,8 +4,10 @@ export interface StirlingPdfModuleOptions {
   timeout?: number;
 }
 
+import type { DynamicModule, Type, ForwardReference, InjectionToken, OptionalFactoryDependency } from '@nestjs/common';
+
 export interface StirlingPdfModuleAsyncOptions {
-  imports?: any[];
-  useFactory?: (...args: any[]) => Promise<StirlingPdfModuleOptions> | StirlingPdfModuleOptions;
-  inject?: any[];
+  imports?: Array<Type<unknown> | DynamicModule | Promise<DynamicModule> | ForwardReference>;
+  useFactory?: (...args: unknown[]) => Promise<StirlingPdfModuleOptions> | StirlingPdfModuleOptions;
+  inject?: Array<InjectionToken | OptionalFactoryDependency>;
 }
