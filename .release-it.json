@@ -8,7 +8,7 @@
   "github": {
     "release": true,
     "releaseName": "Release v${version}",
-    "releaseNotes": "## What's Changed\n\n${changelog}"
+    "releaseNotes": null
   },
   "npm": {
     "publish": true,
@@ -26,7 +26,11 @@
   "plugins": {
     "@release-it/conventional-changelog": {
       "preset": "angular",
-      "infile": "CHANGELOG.md"
+      "infile": "CHANGELOG.md",
+      "strictSemVer": true,
+      "gitRawCommitsOpts": {
+        "format": "%B%n-hash-%n%H%n-gitTags-%n%d%n-committerDate-%n%ci"
+      }
     }
   }
 }
