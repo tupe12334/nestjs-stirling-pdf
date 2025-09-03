@@ -15,7 +15,11 @@
     "publishPath": "dist"
   },
   "hooks": {
-    "before:init": ["pnpm run test", "pnpm run lint"],
+    "before:init": [
+      "if [ -f .env ]; then set -a && source .env && set +a; fi",
+      "pnpm run test", 
+      "pnpm run lint"
+    ],
     "after:bump": "pnpm run build",
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },

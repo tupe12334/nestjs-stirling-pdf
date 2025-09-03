@@ -105,6 +105,36 @@ class StirlingPdfService {
 - NestJS >= 8.0
 - A running Stirling PDF instance
 
+## Development
+
+### Environment Setup
+
+Copy the example environment file and configure your tokens:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and add your tokens:
+- `NPM_TOKEN`: Required for publishing to NPM
+- `GITHUB_TOKEN`: Required for creating GitHub releases
+
+### Release Process
+
+The project uses `release-it` for automated releases:
+
+```bash
+pnpm run release
+```
+
+This will:
+1. Load environment variables from `.env` if it exists
+2. Run tests and linting
+3. Bump version and update changelog
+4. Build the project
+5. Create git tag and GitHub release
+6. Publish to NPM
+
 ## Contributing
 
 Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on how to get started.
