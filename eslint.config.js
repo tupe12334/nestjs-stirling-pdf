@@ -21,6 +21,6 @@ export default [
     },
   },
   {
-    ignores: ['dist/**', 'src/generated/**', '*.config.*'],
+    ignores: ['dist/**', 'src/generated/**', '*.config.*', '**/*.spec.ts', '**/*.test.ts'],
   },
 ];
